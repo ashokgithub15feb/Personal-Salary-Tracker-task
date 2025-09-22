@@ -6,7 +6,11 @@ import com.walkingtree.salary.tracker.service.SalarySwitchService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
+@RestController
+@RequestMapping("/api/salaries")
 public class SalarySwitchController {
 
     private final SalarySwitchService switchService;

@@ -42,13 +42,15 @@ public class SalaryUploadService {
                     String company = row.getCell(0).getStringCellValue();
                     String currency = row.getCell(1).getStringCellValue();
                     String component = row.getCell(2).getStringCellValue();
-                    BigDecimal amount = BigDecimal.valueOf(row.getCell(3).getNumericCellValue());
+                    String salaryType = row.getCell(3).getStringCellValue();
+                    BigDecimal amount = BigDecimal.valueOf(row.getCell(4).getNumericCellValue());
 
                     SalaryRecord record = new SalaryRecord();
                     record.setCompany(company);
                     record.setCurrency(currency);
                     record.setYear(year);
                     record.setSalaryComponent(component);
+                    record.setSalaryType(salaryType);
                     record.setAmount(amount);
 
                     repository.save(record);
